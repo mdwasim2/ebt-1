@@ -5,7 +5,7 @@
 }
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 10px;
   padding: 10px;
 }
@@ -15,4 +15,18 @@
   padding: 20px;
   text-align: center;
   font-size: 30px;
+  display: grid;
+  place-items: center;
+}
+.grid-container div:nth-child(odd) {
+  background-color: #f0f0f0;
+}
+.grid-container div:nth-child(1) {
+  grid-row: span 4;
+}
+.grid-container div:nth-child(2) {
+  grid-column: span 2;
+}
+.grid-container div:nth-child(6) {
+  grid-row: span 2;
 }
